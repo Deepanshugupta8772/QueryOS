@@ -1,0 +1,132 @@
+{
+  "graph": {
+    "request": {
+      "entity": "billing",
+      "id": "90504204"
+    },
+    "response": {
+      "nodes": [
+        {
+          "entityId": "740509",
+          "id": "sales_order:740509",
+          "label": "Sales Order 740509",
+          "type": "sales_order"
+        },
+        {
+          "entityId": "80738040",
+          "id": "delivery:80738040",
+          "label": "Delivery 80738040",
+          "type": "delivery"
+        },
+        {
+          "entityId": "90504204",
+          "id": "billing:90504204",
+          "label": "Billing 90504204",
+          "type": "billing"
+        },
+        {
+          "entityId": "91150217",
+          "id": "billing:91150217",
+          "label": "Billing 91150217",
+          "type": "billing"
+        },
+        {
+          "entityId": "9400000205",
+          "id": "accounting:9400000205",
+          "label": "Accounting 9400000205",
+          "type": "accounting"
+        },
+        {
+          "entityId": "9400635988",
+          "id": "accounting:9400635988",
+          "label": "Accounting 9400635988",
+          "type": "accounting"
+        },
+        {
+          "entityId": "9400635988",
+          "id": "payment:9400635988",
+          "label": "Payment 9400635988",
+          "type": "payment"
+        }
+      ],
+      "links": [
+        {
+          "source": "sales_order:740509",
+          "target": "delivery:80738040"
+        },
+        {
+          "source": "delivery:80738040",
+          "target": "billing:90504204"
+        },
+        {
+          "source": "delivery:80738040",
+          "target": "billing:91150217"
+        },
+        {
+          "source": "billing:90504204",
+          "target": "accounting:9400000205"
+        },
+        {
+          "source": "billing:91150217",
+          "target": "accounting:9400635988"
+        },
+        {
+          "source": "accounting:9400000205",
+          "target": "payment:9400635988"
+        },
+        {
+          "source": "accounting:9400635988",
+          "target": "payment:9400635988"
+        }
+      ]
+    }
+  },
+  "query": {
+    "request": {
+      "query": "Show the top 5 billing documents by total net amount with the sold-to customer."
+    },
+    "response": {
+      "answer": "Found 5 rows. 1. billing Document=90504243, sold To Party=320000083, total Net Amount=2033.65, transaction Currency=INR 2. billing Document=91150188, sold To Party=320000083, total Net Amount=2033.65, transaction Currency=INR 3. billing Document=90504301, sold To Party=320000083, total Net Amount=1091.53, transaction Currency=INR",
+      "sql": "SELECT billingDocument, soldToParty, totalNetAmount, transactionCurrency FROM billing_document_headers ORDER BY totalNetAmount DESC LIMIT 5",
+      "columns": [
+        "billingDocument",
+        "soldToParty",
+        "totalNetAmount",
+        "transactionCurrency"
+      ],
+      "rowCount": 5,
+      "rows": [
+        {
+          "billingDocument": "90504243",
+          "soldToParty": "320000083",
+          "totalNetAmount": 2033.65,
+          "transactionCurrency": "INR"
+        },
+        {
+          "billingDocument": "91150188",
+          "soldToParty": "320000083",
+          "totalNetAmount": 2033.65,
+          "transactionCurrency": "INR"
+        },
+        {
+          "billingDocument": "90504301",
+          "soldToParty": "320000083",
+          "totalNetAmount": 1091.53,
+          "transactionCurrency": "INR"
+        },
+        {
+          "billingDocument": "91150147",
+          "soldToParty": "320000083",
+          "totalNetAmount": 1091.53,
+          "transactionCurrency": "INR"
+        },
+        {
+          "billingDocument": "90504262",
+          "soldToParty": "320000083",
+          "totalNetAmount": 843.73,
+          "transactionCurrency": "INR"
+        }
+      ]
+    }
+  }
+}
