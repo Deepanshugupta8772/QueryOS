@@ -35,7 +35,11 @@ app.use(
   )
 );
 
-app.get("/*", (req, res) => {
+app.use((req, res, next) => {
+  if (req.path.startsWith("/api")) {
+    return next();
+  }
+
   res.sendFile(
     path.join(
       __dirname,
@@ -43,7 +47,7 @@ app.get("/*", (req, res) => {
     )
   );
 });
-app.use(notFoundMiddleware);
+// app.use(notFoundMiddleware);
 app.use(errorMiddleware);
 
 module.exports = app;
