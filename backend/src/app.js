@@ -1,5 +1,6 @@
 const cors = require("cors");
 const express = require("express");
+const path = require("path");
 
 const apiRoutes = require("./routes");
 const { errorMiddleware, notFoundMiddleware } = require("./middlewares/error.middleware");
@@ -28,6 +29,20 @@ app.use(
 );
 app.use(express.json({ limit: "1mb" }));
 app.use("/api", apiRoutes);
+app.use(
+  express.static(
+    path.join(__dirname, "../../frontend/dist")
+  )
+);
+
+app.get("*", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "../../frontend/dist/index.html"
+    )
+  );
+});
 app.use(notFoundMiddleware);
 app.use(errorMiddleware);
 

@@ -11,6 +11,7 @@
     "start": "node backend/src/server.js",
     "dev:server": "node backend/src/server.js",
     "dev:client": "vite --config frontend/vite.config.mjs",
+    "build": "npm run build:client",
     "build:client": "vite build --config frontend/vite.config.mjs",
     "preview:client": "vite preview --config frontend/vite.config.mjs"
   },
