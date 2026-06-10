@@ -4,7 +4,7 @@ Live Demo: https://queryos-0lt4.onrender.com
 
 AI-powered SAP Order-to-Cash analytics platform that converts natural language into SQL queries and visualizes enterprise relationships through interactive graphs.
 
-Architecture, LLM Strategy, and Guardrails
+# Architecture, LLM Strategy, and Guardrails
 
 ## Architecture Decisions
 - **Split responsibilities by concern**: React + Vite frontend for interaction and visualization; Express backend for data access, graph construction, and LLM-assisted SQL generation.
