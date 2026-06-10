@@ -91,7 +91,7 @@ function AssistantMessage({ message }) {
       <div className="chat-agent">
         <span className="chat-agent__avatar">S</span>
         <div className="chat-agent__meta">
-          <strong>Statiq AI</strong>
+          <strong>QueryOS AI</strong>
           <span>Graph Agent</span>
         </div>
       </div>
@@ -200,7 +200,7 @@ export default function Chat() {
         <div className="chat-panel__title">
           <span className="chat-panel__spark" aria-hidden="true">✦</span>
           <div>
-            <span className="chat-panel__eyebrow">Statiq analyst</span>
+            <span className="chat-panel__eyebrow">QueryOS analyst</span>
             <h2>Ask your data</h2>
           </div>
         </div>
@@ -247,7 +247,7 @@ export default function Chat() {
             <div className="chat-agent">
               <span className="chat-agent__avatar">S</span>
               <div className="chat-agent__meta">
-                <strong>Statiq AI</strong>
+                <strong>QueryOS AI</strong>
                 <span>Graph Agent</span>
               </div>
             </div>

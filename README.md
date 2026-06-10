@@ -1,4 +1,4 @@
-# Statiq: Architecture, LLM Strategy, and Guardrails
+# QueryOS: Architecture, LLM Strategy, and Guardrails
 
 ## Architecture Decisions
 - **Split responsibilities by concern**: React + Vite frontend for interaction and visualization; Express backend for data access, graph construction, and LLM-assisted SQL generation.

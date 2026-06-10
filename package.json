@@ -1,5 +1,5 @@
 {
-  "name": "statiq",
+  "name": "QueryOS",
   "version": "1.0.0",
   "description": "SAP Order-to-Cash graph and query system",
   "main": "backend/src/server.js",

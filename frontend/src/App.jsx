@@ -322,7 +322,7 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="app-footer"><span>© 2026 Statiq Technologies</span><div><a href="#privacy">Privacy Policy</a><i /> <a href="#terms">Terms of Use</a></div></footer>
+      <footer className="app-footer"><span>© 2026 QueryOS Technologies</span><div><a href="#privacy">Privacy Policy</a><i /> <a href="#terms">Terms of Use</a></div></footer>
 
       {aiOpen ? (
         <div className="ai-sheet-backdrop" onMouseDown={() => setAiOpen(false)}>
