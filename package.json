@@ -2,6 +2,9 @@
   "name": "QueryOS",
   "version": "1.0.0",
   "description": "SAP Order-to-Cash graph and query system",
+  "engines": {
+    "node": "20.x"
+  },
   "main": "backend/src/server.js",
   "scripts": {
     "seed": "node backend/src/db/seed.js",
@@ -29,7 +32,7 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-force-graph": "^1.48.2",
-    "sqlite3": "^6.0.1",
+    "sqlite3": "^5.1.7",
     "vite": "^5.4.19"
   }
 }
